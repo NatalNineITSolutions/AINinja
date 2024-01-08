@@ -54,7 +54,7 @@ Route::get('/', function (Request $request) {
 });
 
 
-if ($installed === true) {
+if ($installed === false) {
     // Global access routes
     Route::get('/', [IntroController::class, 'index']);
 
