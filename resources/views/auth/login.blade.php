@@ -1,8 +1,8 @@
 @extends('layouts.auth')
 
 @section('content')
-    <div class="bg-white shadow-card max-w-[1000px] w-full min-h-screen lg:h-screen flex flex-col lg:flex-row">
-    <div class="w-full lg:w-[65%] flex flex-col justify-center pt-10 px-6 bg-cover bg-center" style="background-image: url('{{asset('assets/img/bg-image/login-bg.jpg')}}');">
+    <div class="bg-white shadow-card  w-full min-h-screen lg:h-screen flex flex-col lg:flex-row">
+        <div class="w-full lg:w-3/5 flex flex-col justify-center pt-10 px-6 bg-cover bg-center" style="background-image: url('{{asset('assets/img/bg-image/login-bg.jpg')}}');">
             <h5 class="text22 md:text-[30px] text-white font-bold mb-2 ml-4">
               {{ __("My first job was working in an orange juice factory,but i got canned:couldn't concentrate.") }}
             </h5>
@@ -11,7 +11,7 @@
             </p>
         </div>
 
-        <div class="relative w-full lg:w-[35%] px-9 md:px-[25px] py-[60px]">
+        <div class="relative w-full  lg:w-2/5 flex flex-col justify-center  md:px-[25px] py-[60px] " >
             <div class="flex items-center">
                 <img src="{{asset('assets/logo/fastai.png')}}" alt="Logo" width="32" height="32" class="mr-2 mb-6 ">
 
@@ -42,7 +42,7 @@
                 @endif
             </div>
             <div class="flex items-center justify-between pb-3">
-                <small class=" whitespace-nowrap text-gray-500 font-medium">{{ __('Sign In With Your FastAI Account') }}</small>
+                <small class=" whitespace-nowrap text-gray-700 font-medium">{{ __('Sign In With Your FastAI Account') }}</small>
             </div>
 
             <form method="POST" action="{{ route('login') }}">
@@ -95,26 +95,28 @@
                             {{ __('keep me signed in') }}
                         </span>
                     </label> 
-                    <a href="{{ route('password.request') }}" class="text-sm text-primary-500 font-medium">
+                    <a href="{{ route('password.request') }}" class="text-sm text-primary-500 hover:text-primary-600 font-medium">
                         {{ __('Help? Contact Support') }}
                     </a>                   
                 </div>
     
                 <button 
                     type="submit" 
-                    class="bg-primary-500 hover:bg-primary-500 active:bg-primary-500 font-medium capitalize rounded-md text14 text-white px-14 h-10 mt-7"
+                    class="bg-primary-500 hover:bg-primary-600 active:bg-primary-600 font-medium capitalize rounded-md text14 text-white px-14 h-10 mt-7"
                 >
                     {{ __('Sign In') }}
                 </button>
                 <div class="absolute bottom-2 left-0 right-0 flex items-center justify-center">
                     <p class="font-medium text-gray-500 mt-4">
-                          {{ __('Made with ') }}&#10084;&#65039;{{ __(' by ') }}
-                        <a href="{{ route('register') }}" class="text-primary-500">
+                        {{ __('Made with ') }}&#10084;&#65039;{{ __(' by ') }}
+                        <a href="https://natalnine.com/" class="text-primary-500 hover:text-primary-600" target="_blank">
                           {{ __('NATALNINE') }}
                         </a>
+
                     </p>
                 </div>
             </form>
         </div>
+    
     </div>
 @endsection
