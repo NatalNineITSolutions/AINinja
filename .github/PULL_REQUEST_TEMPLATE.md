@@ -18,14 +18,3 @@ Closes #<!-- add the issue number(s) this pull request addresses, if any -->
 <!-- Any additional information that the reviewer should know about these changes -->
 
 ---
-
-**Reviewer Checklist:**
-<!-- Checklist for the reviewer to follow while reviewing the pull request -->
-- [ ] Code is well-organized and follows coding standards.
-- [ ] Tests have been added or updated for the changes.
-- [ ] Documentation has been reviewed and updated.
-- [ ] No major issues or bugs found during testing.
-
-**Review Instructions:**
-<!-- Any specific instructions for the reviewer while reviewing this pull request -->
-
