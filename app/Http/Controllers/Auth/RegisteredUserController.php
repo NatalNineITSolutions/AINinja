@@ -14,6 +14,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
+use Illuminate\Support\Facades\Log; // Import the Log facade
 
 
 class RegisteredUserController extends Controller
@@ -40,14 +41,18 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        AppHelper::smtp();
+        // AppHelper::smtp(); line Commanded to stop email Authentication.
         $plan = SubscriptionPlan::where('type', 'Free')->first();
 
         $request->validate([
             'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:' . User::class,
+            'email' => 'required|string|email|max:255|unique:' . User::class, 
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
+
+// Log at the "info" level
+         Log::info("User registration attempt for email: {$request->email}");
+
 
         $user = User::create([
             'name' => $request->name,
@@ -57,11 +62,17 @@ class RegisteredUserController extends Controller
             'status' => 'active',
             'role' => 'user',
         ]);
+        
+        Log::info("User registered successfully: {$user->email}");
 
-        event(new Registered($user));
+      // event(new Registered($user)); this line commanded to stop email verification.
 
         Auth::login($user);
 
+        Log::info("User logged in after registration: {$user->email}");
+
         return redirect(RouteServiceProvider::HOME);
+
+        
     }
 }

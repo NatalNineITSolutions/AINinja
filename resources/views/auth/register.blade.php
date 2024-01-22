@@ -11,7 +11,7 @@
             </p>
         </div>
 
-        <div class=" w-full lg:w-2/5 flex flex-col justify-center md:px-[25px] py-[60px]">
+        <div class=" w-full lg:w-2/5 flex flex-col justify-center px-[25px] py-[60px]">
             <div class="flex items-center">
                <img src="{{asset('assets/logo/fastai.png')}}" alt="Logo" width="32" height="32" class="mr-2 mb-6 ">
                <h5 class="text16 md:text-[22px] text-gray-900 font-bold mb-6">

@@ -11,7 +11,8 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 // use Laravel\Paddle\Billable;
 
-class User extends Authenticatable implements MustVerifyEmail
+// class User extends Authenticatable implements MustVerifyEmail  (this line is replaced by the next line to avoid email verification)
+class User extends Authenticatable 
 {
     use HasApiTokens, HasFactory, Notifiable;
     // use CashierBillable {
