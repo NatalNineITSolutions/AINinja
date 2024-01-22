@@ -1,7 +1,7 @@
 @extends('layouts.auth')
 
 @section('content')
-    <div class="bg-white shadow-card  w-full min-h-screen lg:h-screen flex flex-col lg:flex-row sm:w-full ">
+    <div class="bg-white shadow-card  w-full min-h-screen lg:h-screen flex flex-col lg:flex-row">
         <div class="w-full lg:w-3/5 flex flex-col justify-center pt-10 px-6 bg-cover bg-center " style="background-image: url('{{asset('assets/img/bg-image/login-bg.jpg')}}');">
             <h5 class="text22 md:text-[30px] text-white font-bold mb-2 ml-4">
               {{ __("My first job was working in an orange juice factory,but i got canned:couldn't concentrate.") }}
