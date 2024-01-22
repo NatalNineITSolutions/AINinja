@@ -4,7 +4,7 @@
     <div class="bg-white shadow-card  w-full min-h-screen lg:h-screen flex flex-col lg:flex-row">
         <div class="w-full lg:w-3/5 flex flex-col justify-center pt-10 px-6 bg-cover bg-center " style="background-image: url('{{asset('assets/img/bg-image/login-bg.jpg')}}');">
             <h5 class="text22 md:text-[30px] text-white font-bold mb-2 ml-4">
-              {{ __("My first job was working in an orange juice factory,but i got canned:couldn't concentrate.") }}
+              {{ __("My first job was working in orange juice factory,but i got canned:couldn't concentrate.") }}
             </h5>
             <p class="text12 md:text-[20px] mt-3 pb-5 text-white font-bold ml-4">
                {{ __('-- FastAI') }}
@@ -17,7 +17,7 @@
                 <img src="{{asset('assets/logo/fastai.png')}}" alt="Logo" width="32" height="32" class="mr-2 mb-6 ">
 
                 <h5 class="text16 md:text-[22px] text-gray-900 font-bold mb-6">
-                  {{ __('Welcome to FastAI') }}
+                  {{ __('Welcome to FastAI ') }}
                 </h5>
             </div>  
             <div class="flex items-center justify-between gap-3">
