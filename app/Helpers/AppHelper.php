@@ -25,7 +25,6 @@ class AppHelper
         return $smtp;
     }
 
-
     public static function user()
     {
         $id = auth()->user()->id;
