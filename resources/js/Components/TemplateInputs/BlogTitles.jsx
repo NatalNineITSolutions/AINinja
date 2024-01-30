@@ -20,7 +20,7 @@ const BlogTitles = ({ data, errors, onHandleChange }) => {
                 maxLength={10}
                 onChange={onHandleChange}
                 required
-            /> */}
+            /> */}   
         </div>
     );
 };
