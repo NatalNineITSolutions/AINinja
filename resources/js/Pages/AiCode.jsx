@@ -15,12 +15,11 @@ import CodeViewer from "@/Components/CodeViewer";
 import Dashboard from "@/Layouts/Dashboard";
 import { error, warning } from "@/utils/toast";
 
-const selectedLanguages = ['javascript', 'python', 'java','cpp','c','abnf','go','react'];
+const selectedLanguages = ['javascript', 'python', 'java','cpp','c','go','react','kotlin'];
 
 const AiCode = (props) => {
    let langs = [
-      //another method to add selected languages that are exceeding from list
-      
+      //another method to add selected languages that are exceeding from list by key value pairs
    ];
    const { auth, todaysCodes } = props;
    Object.entries(languages).forEach(([name, language]) => {
