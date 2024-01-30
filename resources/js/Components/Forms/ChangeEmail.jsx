@@ -62,8 +62,7 @@ const ChangeEmail = () => {
                   type="submit"
                   variant="text"
                   color="white"
-                  className="bg-primary-500 hover:bg-primary-500 active:bg-primary-500 font-medium capitalize rounded-md text14"
-               >
+                  className="bg-primary-500 hover:bg-primary-500 active:bg-primary-500 font-medium capitalize rounded-md text14">
                   Get Email Change Link
                </Button>
             </div>

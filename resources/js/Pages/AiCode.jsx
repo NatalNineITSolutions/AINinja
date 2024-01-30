@@ -10,16 +10,23 @@ import TextArea from "@/Components/TextArea";
 import Code from "@/Components/Icons/Code";
 import * as languages from "react-syntax-highlighter/dist/esm/languages/hljs";
 import InputDropdown from "@/Components/InputDropdown";
+import CodeList from "@/Components/CodeList";
 import CodeViewer from "@/Components/CodeViewer";
 import Dashboard from "@/Layouts/Dashboard";
 import { error, warning } from "@/utils/toast";
 
+const selectedLanguages = ['javascript', 'python', 'java','cpp','c','go','react','kotlin'];
+
 const AiCode = (props) => {
-   let langs = [];
+   let langs = [
+      //another method to add selected languages that are exceeding from list by key value pairs
+   ];
    const { auth, todaysCodes } = props;
    Object.entries(languages).forEach(([name, language]) => {
+      if(selectedLanguages.includes(name)){
       const item = { key: name, value: name };
       langs.push(item);
+      }
    });
 
    const [isLoading, setIsLoading] = useState(false);
@@ -137,6 +144,19 @@ const AiCode = (props) => {
                            </p>
                         )}
                      </div>
+                     
+                     {/* <div className="mt-5">
+                        <CodeList
+                           
+                        />
+                        {errors.language && (
+                           <p className="text-sm text-red-500 mt-1">
+                              {errors.language}
+                           </p>
+                        )}
+                     </div> */}
+
+
                      <div className="mt-5">
                         <TextArea
                            rows={10}
