@@ -18,7 +18,7 @@
     </head>
 
     <body>
-        <main class="min-h-screen flex justify-center items-center p-6 bg-[#F5F5F5]">
+        <main class="min-h-screen flex justify-center items-center bg-[#F5F5F5]">
             @yield('content')
         </main>
     </body>
